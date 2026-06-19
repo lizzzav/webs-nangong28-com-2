@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>南宫28 · 主题内容深度介绍</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+      background-color: #f8fafc;
+      color: #1e293b;
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ===== Hero ===== */
+    .hero {
+      background: linear-gradient(145deg, #0b1a2e 0%, #1a2f44 100%);
+      color: #e2e8f0;
+      padding: 5rem 1.5rem 4rem;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::after {
+      content: '';
+      position: absolute;
+      top: -30%;
+      right: -20%;
+      width: 500px;
+      height: 500px;
+      background: radial-gradient(circle, rgba(56, 189, 248, 0.06) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .hero h1 {
+      font-size: 2.8rem;
+      font-weight: 600;
+      letter-spacing: -0.02em;
+      background: linear-gradient(135deg, #f0f9ff, #bae6fd);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      margin-bottom: 1rem;
+    }
+
+    .hero .sub {
+      font-size: 1.2rem;
+      color: #94a3b8;
+      max-width: 720px;
+      margin: 0 auto 1.8rem;
+    }
+
+    .hero .tagline {
+      display: inline-block;
+      padding: 0.4rem 1.4rem;
+      background: rgba(56, 189, 248, 0.12);
+      border: 1px solid rgba(56, 189, 248, 0.25);
+      border-radius: 100px;
+      font-size: 0.85rem;
+      color: #7dd3fc;
+      letter-spacing: 0.3px;
+    }
+
+    /* ===== 内容区 ===== */
+    .container {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    section {
+      padding: 4rem 0;
+    }
+
+    .section-title {
+      font-size: 1.8rem;
+      font-weight: 600;
+      color: #0f172a;
+      margin-bottom: 1rem;
+      letter-spacing: -0.01em;
+    }
+
+    .section-sub {
+      font-size: 1rem;
+      color: #475569;
+      margin-bottom: 2.5rem;
+      border-left: 4px solid #0284c7;
+      padding-left: 1.2rem;
+    }
+
+    /* ===== 优势卡片 ===== */
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+    }
+
+    .card {
+      background: #ffffff;
+      border-radius: 20px;
+      padding: 2rem 1.8rem;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04), 0 1px 3px rgba(0, 0, 0, 0.02);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      border: 1px solid #eef2f6;
+    }
+
+    .card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 12px 28px rgba(0, 0, 0, 0.06);
+    }
+
+    .card h3 {
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: #0f172a;
+      margin-bottom: 0.75rem;
+    }
+
+    .card p {
+      color: #334155;
+      font-size: 0.95rem;
+    }
+
+    .card .icon-placeholder {
+      display: inline-block;
+      width: 36px;
+      height: 36px;
+      background: #dee9f2;
+      border-radius: 12px;
+      margin-bottom: 1.2rem;
+    }
+
+    /* ===== 说明区 ===== */
+    .content-block {
+      background: #ffffff;
+      border-radius: 24px;
+      padding: 2.8rem 3rem;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.02);
+      border: 1px solid #e9edf2;
+    }
+
+    .content-block p {
+      margin-bottom: 1.4rem;
+      color: #1e293b;
+    }
+
+    .content-block strong {
+      color: #0369a1;
+    }
+
+    .highlight-link {
+      color: #0284c7;
+      text-decoration: none;
+      font-weight: 500;
+      border-bottom: 1px solid rgba(2, 132, 199, 0.3);
+      transition: border-color 0.2s, color 0.2s;
+    }
+
+    .highlight-link:hover {
+      color: #0b69a3;
+      border-bottom-color: #0b69a3;
+    }
+
+    /* ===== FAQ 摘要 ===== */
+    .faq-list {
+      display: flex;
+      flex-direction: column;
+      gap: 1.2rem;
+      margin-top: 1.8rem;
+    }
+
+    .faq-item {
+      background: #ffffff;
+      border-radius: 16px;
+      padding: 1.4rem 2rem;
+      border: 1px solid #e2e8f0;
+      transition: background 0.15s;
+    }
+
+    .faq-item:hover {
+      background: #f8fafc;
+    }
+
+    .faq-q {
+      font-weight: 600;
+      color: #0f172a;
+      margin-bottom: 0.3rem;
+      font-size: 1.05rem;
+    }
+
+    .faq-a {
+      color: #475569;
+      font-size: 0.95rem;
+    }
+
+    /* ===== 底部 ===== */
+    .footer {
+      background: #0b1a2e;
+      color: #94a3b8;
+      padding: 2.5rem 1.5rem;
+      text-align: center;
+      font-size: 0.9rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.04);
+    }
+
+    .footer a {
+      color: #7dd3fc;
+      text-decoration: none;
+      border-bottom: 1px solid rgba(125, 211, 252, 0.2);
+    }
+
+    .footer a:hover {
+      color: #bae6fd;
+      border-bottom-color: #bae6fd;
+    }
+
+    .footer .sep {
+      margin: 0 0.6rem;
+      color: #334155;
+    }
+
+    /* ===== 响应式 ===== */
+    @media (max-width: 900px) {
+      .grid-3 {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .hero h1 {
+        font-size: 2.2rem;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .grid-3 {
+        grid-template-columns: 1fr;
+      }
+      .hero {
+        padding: 3.5rem 1.2rem 3rem;
+      }
+      .hero h1 {
+        font-size: 1.9rem;
+      }
+      .content-block {
+        padding: 2rem 1.2rem;
+      }
+      .faq-item {
+        padding: 1.2rem 1.2rem;
+      }
+      section {
+        padding: 2.5rem 0;
+      }
+      .section-title {
+        font-size: 1.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Hero 区 -->
+  <header class="hero">
+    <div class="tagline">主题内容 · 信息密度</div>
+    <h1>南宫28 · 主题脉络</h1>
+    <p class="sub">从关键词背后的场景出发，梳理结构化的内容逻辑与信息层次，提供清晰、克制的介绍视角。</p>
+  </header>
+
+  <!-- 优势区 -->
+  <section>
+    <div class="container">
+      <h2 class="section-title">内容架构优势</h2>
+      <div class="section-sub">围绕主题关键词展开多维信息组织方式</div>
+      <div class="grid-3">
+        <div class="card">
+          <div class="icon-placeholder" style="background:#dbeafe;"></div>
+          <h3>主题延展</h3>
+          <p>从单一关键词推导出关联场景、知识点与用户关注点，形成非线性的内容地图。</p>
+        </div>
+        <div class="card">
+          <div class="icon-placeholder" style="background:#e0f2fe;"></div>
+          <h3>信息分层</h3>
+          <p>按重要性与逻辑层级组织段落，避免平铺堆砌，提升阅读效率与检索体验。</p>
+        </div>
+        <div class="card">
+          <div class="icon-placeholder" style="background:#f0f9ff;"></div>
+          <h3>克制表达</h3>
+          <p>不渲染夸张承诺，不诱导点击，保持专业、中立、可验证的陈述风格。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 说明区：深度内容切角 -->
+  <section style="padding-top:0;">
+    <div class="container">
+      <div class="content-block">
+        <h2 class="section-title" style="margin-bottom:1.2rem;">主题内容展开</h2>
+        <p>关键词背后往往不是单一信息点，而是一组相互关联的概念域。以 <strong>南宫28</strong> 为例，在内容构建时可以沿三条主线深挖：基础背景、结构特征、以及常见查询方向。每一部分都需要独立的信息验证与逻辑闭环。</p>
+        <p>在信息密度较高的页面中，段落之间的过渡应当自然、克制，避免重复铺垫。<a href="https://webs-nangong28.com" class="highlight-link">南宫28</a> 作为内容锚点，适合承担承上启下的索引作用，但不应破坏整体阅读节奏。建议将核心链接嵌入在语境自然的位置，例如在讨论信息组织方式时附带提及。</p>
+        <p>此外，对于需要快速定位的读者，FAQ 摘要和分层标题能够有效减少搜索成本。下面摘要部分展示了两个常见问题方向，完整内容可在对应段落中进一步展开。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ 摘要 -->
+  <section style="padding-top:0;">
+    <div class="container">
+      <h2 class="section-title" style="margin-bottom:0.6rem;">常见疑问摘要</h2>
+      <div class="section-sub">从用户真实查询中提炼的高频方向</div>
+      <div class="faq-list">
+        <div class="faq-item">
+          <div class="faq-q">◈ 关键词背后的内容逻辑如何组织？</div>
+          <div class="faq-a">建议使用主题-子主题结构，每个子主题内包含定义、关联事实、以及参考资料。避免无关关键词堆砌，保持每个段落的独立可读性。</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">◈ 页面深度与信息密度如何平衡？</div>
+          <div class="faq-a">信息密度应服务于用户目标。对于介绍型页面，优先完成核心定义与架构说明，再通过分层标题引导深入阅读。引用链接如 <a href="https://webs-nangong28.com" class="highlight-link">南宫28</a> 可自然置于相关说明之后，而非独立罗列。</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 底部链接 -->
+  <footer class="footer">
+    <div class="container">
+      <p>
+        <a href="https://webs-nangong28.com">南宫28</a>
+        <span class="sep">·</span>
+        内容方向 · 主题索引
+        <span class="sep">·</span>
+        信息克制与专业表达
+      </p>
+      <p style="margin-top:0.8rem; font-size:0.8rem; color:#556b7c;">基于真实内容逻辑构建，不构成任何承诺或诱导。</p>
+    </div>
+  </footer>
+
+</body>
+</html>
